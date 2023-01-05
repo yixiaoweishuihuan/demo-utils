@@ -4,9 +4,15 @@ import form from './form'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    drawerState: false
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    changeDrawerState (state, value) {
+      state.drawerState = value
+    }
+  },
   actions: {},
   modules: {
     form

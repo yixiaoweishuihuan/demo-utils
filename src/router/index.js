@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home/Home'
-import Form from '../views/Form/Form'
+import childrenRouter from './children'
 
 Vue.use(VueRouter)
 
@@ -10,16 +10,7 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
-    children: [
-      {
-        path: '/',
-        name: 'form',
-        component: Form,
-        meta: {
-          title: '表单校验'
-        }
-      }
-    ]
+    children: childrenRouter
   }
   // {
   //   path: '/about',

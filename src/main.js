@@ -7,7 +7,11 @@ import './style/normalize.css'
 
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+
+// 防止xss攻击
+import vueDompurifyHTMLPlugin from 'vue-dompurify-html'
 Vue.use(ElementUI)
+Vue.use(vueDompurifyHTMLPlugin)
 
 Vue.config.productionTip = false
 

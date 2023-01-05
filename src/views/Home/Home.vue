@@ -1,58 +1,34 @@
 <template>
   <div class="home">
-    <div class="topbar">
-      demo集合
-      <el-button size="mini"
-        @click="drawer = true"
-        type="primary"
-        style="margin: 7px 20px 0 0; float: right;"
-      >
-        查看描述 ->
-      </el-button>
-    </div>
+    <Topbar />
     <div class="main">
-      <div class="sidebar">我是侧边栏</div>
+      <Sidebar />
       <div class="routerContent">
         <el-scrollbar>
-          <router-view></router-view>
+          <router-view />
         </el-scrollbar>
       </div>
-      <el-drawer
-        size="50%"
-        title="问题描述："
-        :visible.sync="drawer"
-        :direction="direction"
-        :before-close="handleClose"
-      >
-        <div class="detail" style="padding: 0 20px" v-html="discription"></div>
-      </el-drawer>
+      <Drawer />
     </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import Sidebar from '@/tags/Sidebar/Sidebar'
+import Topbar from '@/tags/Topbar/Topbar'
+import Drawer from '@/tags/Drawer/Drawer'
 export default {
   name: 'HomeView',
-  components: {},
+  components: {
+    Sidebar,
+    Topbar,
+    Drawer
+  },
   data () {
-    return {
-      drawer: false,
-      direction: 'rtl'
-    }
+    return {}
   },
-  computed: {
-    ...mapState('form', ['discription'])
-  },
-  methods: {
-    handleClose (done) {
-      this.$confirm('确认关闭？')
-        .then(_ => {
-          done()
-        })
-        .catch(_ => {})
-    }
-  }
+
+  methods: {}
 }
 </script>
 <style lang="styl" scoped>
