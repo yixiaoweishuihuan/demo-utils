@@ -1,5 +1,5 @@
 <template>
-  <el-menu class="sidebar" default-active="/" :collapse="sidebarState" collapse-transition router
+  <el-menu class="sidebar" :default-active="defaultActive" :collapse="sidebarState" collapse-transition router
   background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
     <el-menu-item :index="item.path" v-for="item in sideList" :key="item.name">
       <i :class="item.meta.icon"></i>
@@ -20,6 +20,9 @@ export default {
   computed: {
     sidebarState () {
       return this.$store.state.sidebarState
+    },
+    defaultActive () {
+      return this.$route.path.replace('/', '') || '/'
     }
   },
   methods: {}
