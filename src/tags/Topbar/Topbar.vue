@@ -1,14 +1,8 @@
 <template>
   <div class="topbar">
-    demo集合
-    <el-button
-      size="mini"
-      @click="openDrawer"
-      type="primary"
-      style="margin: 7px 40px 0 0; float: right"
-    >
-      查看描述 ->
-    </el-button>
+    <i class="el-icon-s-unfold fs-18  pointer" @click="changeSidebar"></i>
+    <span class="title">{{title}}</span>
+    <el-button size="mini" @click="openDrawer" type="primary">查看详情</el-button>
   </div>
 </template>
 
@@ -19,9 +13,17 @@ export default {
     return {
     }
   },
+  computed: {
+    title () {
+      return this.$route.meta.title || 'demo集合'
+    }
+  },
   methods: {
     openDrawer () {
-      this.$store.commit('changeDrawerState', true)
+      this.$store.commit('changeDrawerState')
+    },
+    changeSidebar () {
+      this.$store.commit('changeSidebar')
     }
   }
 }

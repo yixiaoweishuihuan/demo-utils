@@ -1,4 +1,5 @@
 import Form from '../views/Form/Form'
+const SelectExpand = () => import(/* webpackChunkName: 'selectExpand' */ '../views/SelectExpand/SelectExpand')
 export default [
   {
     path: '/',
@@ -10,12 +11,12 @@ export default [
     }
   },
   {
-    path: '/form1',
-    name: 'form1',
-    component: Form,
+    path: 'selectExpand',
+    name: 'selectExpand',
+    component: SelectExpand,
     meta: {
-      title: '表单校验1',
-      icon: 'el-icon-loading'
+      title: '远程搜索下拉框默认值不可删除',
+      icon: 'el-icon-edit'
     }
   }
 ]

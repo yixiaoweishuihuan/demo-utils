@@ -5,12 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    drawerState: false
+    drawerState: false, // 详情抽屉
+    sidebarState: true // 侧边栏是否关闭
   },
   getters: {},
   mutations: {
-    changeDrawerState (state, value) {
-      state.drawerState = value
+    changeDrawerState (state) {
+      state.drawerState = !state.drawerState
+    },
+    changeSidebar (state) {
+      state.sidebarState = !state.sidebarState
     }
   },
   actions: {},

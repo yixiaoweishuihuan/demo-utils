@@ -11,12 +11,13 @@ const routes = [
     name: 'home',
     component: Home,
     children: childrenRouter
+  },
+  {
+    path: '*',
+    redirect: {
+      name: 'form'
+    }
   }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
 ]
 
 const router = new VueRouter({
