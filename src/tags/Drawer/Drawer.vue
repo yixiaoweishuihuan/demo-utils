@@ -28,11 +28,12 @@ export default {
   },
   methods: {
     handleClose () {
-      this.$confirm('确认关闭？')
-        .then(_ => {
-          this.$store.commit('changeDrawerState')
-        })
-        .catch(_ => {})
+      this.$store.commit('changeDrawerState')
+      // this.$confirm('确认关闭？')
+      //   .then(_ => {
+      //      this.$store.commit('changeDrawerState')
+      //   })
+      //   .catch(_ => {})
     }
   }
 }
