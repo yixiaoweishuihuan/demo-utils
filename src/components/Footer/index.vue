@@ -9,5 +9,5 @@ export default {
 </script>
 
 <style lang="styl" scoped>
-@import './Footer.styl';
+@import './index.styl';
 </style>

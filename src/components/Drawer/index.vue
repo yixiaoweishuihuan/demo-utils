@@ -1,14 +1,17 @@
 <template>
   <div class="drawer-content">
+    <!-- size="auto" -->
     <el-drawer
       custom-class="drawer-cust"
-      size="35%"
+      size="70%"
       title="问题描述："
       :visible.sync="drawerState"
       direction="rtl"
       :before-close="handleClose"
     >
-      <div class="detail" v-dompurify-html="discription"></div>
+      <el-scrollbar>
+        <div class="detail" v-dompurify-html="discription"></div>
+      </el-scrollbar>
     </el-drawer>
   </div>
 </template>
@@ -21,7 +24,7 @@ export default {
     return {}
   },
   computed: {
-    ...mapState('form', ['discription']),
+    ...mapState(['discription']),
     drawerState () {
       return this.$store.state.drawerState
     }
@@ -29,18 +32,13 @@ export default {
   methods: {
     handleClose () {
       this.$store.commit('changeDrawerState')
-      // this.$confirm('确认关闭？')
-      //   .then(_ => {
-      //      this.$store.commit('changeDrawerState')
-      //   })
-      //   .catch(_ => {})
     }
   }
 }
 </script>
 
 <style lang="styl" scoped>
-@import './Drawer.styl';
+@import './index.styl';
 </style>
 <style lang="styl">
 .drawer-content

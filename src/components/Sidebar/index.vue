@@ -10,19 +10,18 @@
 
 <script>
 import sideList from '@/router/children'
+import { mapState } from 'vuex'
 export default {
   name: 'SidebarView',
   data () {
     return {
-      sideList
+      sideList: sideList.filter(item => !item.redirect)
     }
   },
   computed: {
-    sidebarState () {
-      return this.$store.state.sidebarState
-    },
+    ...mapState(['sidebarState']),
     defaultActive () {
-      return this.$route.path.replace('/', '') || '/'
+      return this.$route.path.replace('/', '') || 'form'
     }
   },
   methods: {}
@@ -30,5 +29,5 @@ export default {
 </script>
 
 <style lang="styl" scoped>
-@import './Sidebar.styl';
+@import './index.styl';
 </style>

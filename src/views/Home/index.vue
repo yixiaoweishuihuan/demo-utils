@@ -10,7 +10,7 @@
         </el-aside>
         <el-main>
           <el-scrollbar>
-            <router-view class="pd-40" />
+            <router-view class="pd-40 mgb-40" />
             <Drawer />
           </el-scrollbar>
         </el-main>
@@ -23,17 +23,17 @@
 </template>
 
 <script>
-import Sidebar from '@/tags/Sidebar/Sidebar'
-import Topbar from '@/tags/Topbar/Topbar'
-import Drawer from '@/tags/Drawer/Drawer'
-import Footer from '@/tags/Footer/Footer'
+import Sidebar from '@/components/Sidebar'
+import Topbar from '@/components/Topbar'
+import Footer from '@/components/Footer'
+import Drawer from '@/components/Drawer'
 export default {
   name: 'HomeView',
   components: {
     Sidebar,
     Topbar,
-    Drawer,
-    Footer
+    Footer,
+    Drawer
   },
   data () {
     return {}
@@ -43,7 +43,7 @@ export default {
 }
 </script>
 <style lang="styl" scoped>
-@import './Home.styl';
+@import './index.styl';
 </style>
 <style lang="styl">
 .home

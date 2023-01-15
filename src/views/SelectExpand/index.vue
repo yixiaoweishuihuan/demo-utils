@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style lang="styl"  scoped>
-@import './SelectExpand.styl';
+@import './index.styl';
 </style>

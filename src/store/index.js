@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     drawerState: false, // 详情抽屉
-    sidebarState: true // 侧边栏是否关闭
+    sidebarState: true, // 侧边栏是否关闭
+    discription: '' // 抽屉描述
   },
   getters: {},
   mutations: {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     changeSidebar (state) {
       state.sidebarState = !state.sidebarState
+    },
+    initDesc (state, value) {
+      state.discription = value
     }
   },
   actions: {},
