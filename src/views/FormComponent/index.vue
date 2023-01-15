@@ -10,9 +10,9 @@
         :key="formItem.prop"
         :label="getLabel(formItem.prop)"
         :prop="`students[${index}].value`"
-        :rules="getRule(config[formItem.prop])"
-      >
-        <el-input v-model="formItem.value"></el-input>
+        :rules="getRule(config[formItem.prop])">
+        <component :is="comMap[config[formItem.prop]['type']]" v-model="formItem.value" :config="config[formItem.prop]">
+        </component>
       </el-form-item>
 
       <FormFooter :submitForm="submitForm" :resetForm="resetForm">
@@ -32,9 +32,10 @@
 <script>
 import { formItemList } from '@/utils/mock/formComponent'
 import formMixins from '@/utils/mixins/form'
+import baseComponents from '@/utils/mixins/baseComponents'
 export default {
   name: 'FormView',
-  mixins: [formMixins],
+  mixins: [formMixins, baseComponents],
   data () {
     return {
       form: {
