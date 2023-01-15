@@ -1,11 +1,11 @@
-import Input from '@/components/Input'
-import Radio from '@/components/Radio'
-import Number from '@/components/Number'
-import Checkbox from '@/components/Checkbox'
-import Select from '@/components/Select'
+import Input from '@/tags/Input'
+import Radio from '@/tags/Radio'
+import Number from '@/tags/Number'
+import Checkbox from '@/tags/Checkbox'
+import Select from '@/tags/Select'
 
 export default {
-  data() {
+  data () {
     return {
       comMap: {
         input: Input,
@@ -14,6 +14,6 @@ export default {
         checkbox: Checkbox,
         select: Select
       }
-    };
-  },
+    }
+  }
 }

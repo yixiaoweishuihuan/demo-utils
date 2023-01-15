@@ -1,5 +1,5 @@
 <template>
-  <el-input-number :value="value" @change="(val) => $emit('input', val)" 
+  <el-input-number :value="value" @change="(val) => $emit('input', val)"
    :min="config.min" :max="config.max" :label="config.label" :disabled="config.disabled">
   </el-input-number>
 </template>

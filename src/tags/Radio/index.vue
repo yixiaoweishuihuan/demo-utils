@@ -8,12 +8,12 @@
 export default {
   name: 'RadioView',
   props: {
-    value:{
+    value: {
       type: [String, Number, Boolean],
       default: '',
       require: true
     },
-    config:  {
+    config: {
       type: Object,
       default: () => ({
         options: [],

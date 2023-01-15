@@ -9,7 +9,7 @@
 <script>
 /*
   这里把v-model拆开写会有bug change事件拿到的一直是空数组 具体原因还未找到
-  因此这里使用了watch监听两个value的值 
+  因此这里使用了watch监听两个value的值
 */
 export default {
   name: 'CheckboxView',
@@ -42,7 +42,7 @@ export default {
       },
       deep: true,
       immediate: true
-    } 
+    }
   },
   data () {
     return {
