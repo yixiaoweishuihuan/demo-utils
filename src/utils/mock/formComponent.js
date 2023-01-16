@@ -11,27 +11,29 @@ export const formItemList = {
         value: '男'
       },
       {
-        prop: 'age',
+        prop: 'age', 
         value: 0
       },
-      {
-        prop: 'hobby',
-        value: ['画画']
-      },
-      {
-        prop: 'job',
-        value: ''
-      }
+      // {
+      //   prop: 'hobby',
+      //   value: ['画画']
+      // },
+      // {
+      //   prop: 'job',
+      //   value: ''
+      // }
     ],
     config: {
       name: {
         label: '姓名',
         type: 'input',
+        typeName: '输入框',
         require: true
       },
       sex: {
         label: '性别',
         type: 'radio',
+        typeName: '单选框',
         require: true,
         options: [
           { value: '男', label: '男' },
@@ -41,6 +43,7 @@ export const formItemList = {
       age: {
         label: '年龄',
         type: 'number',
+        typeName: '计数器',
         require: true,
         min: 0,
         max: 150,
@@ -50,6 +53,7 @@ export const formItemList = {
       hobby: {
         label: '爱好',
         type: 'checkbox',
+        typeName: '复选框',
         require: false,
         options: [
           { value: '书法', label: '书法' },
@@ -64,6 +68,7 @@ export const formItemList = {
       job: {
         label: '职位',
         type: 'select',
+        typeName: '下拉选择框',
         require: false,
         options: [
           { value: 12, label: '班长' },
