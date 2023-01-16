@@ -1,6 +1,6 @@
 <template>
   <el-input-number :value="value" @change="(val) => $emit('input', val)"
-   :min="config.min" :max="config.max" :label="config.label" :disabled="config.disabled">
+   :min="config.min" :max="config.max" :label="config.nLabel" :disabled="config.disabled">
   </el-input-number>
 </template>
 
@@ -18,7 +18,7 @@ export default {
       default: () => ({
         min: -Infinity,
         max: Infinity,
-        label: '请输入数值',
+        nLabel: '请输入数值',
         disabled: false
       }),
       require: true

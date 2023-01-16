@@ -5,15 +5,15 @@ export const formItemList = {
       {
         prop: 'name',
         value: ''
-      },
-      {
-        prop: 'sex',
-        value: '男'
-      },
-      {
-        prop: 'age', 
-        value: 0
-      },
+      }
+      // {
+      //   prop: 'sex',
+      //   value: '男'
+      // },
+      // {
+      //   prop: 'age',
+      //   value: 0
+      // },
       // {
       //   prop: 'hobby',
       //   value: ['画画']
@@ -47,7 +47,7 @@ export const formItemList = {
         require: true,
         min: 0,
         max: 150,
-        label: '请输入年龄',
+        nLabel: '请输入年龄',
         disabled: false
       },
       hobby: {
