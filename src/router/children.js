@@ -2,6 +2,7 @@ import Form from '../views/Form'
 const FormDynamic = () => import(/* webpackChunkName: 'form' */ '@/views/FormDynamic')
 const FormComponent = () => import(/* webpackChunkName: 'form' */ '@/views/FormComponent')
 const SelectExpand = () => import(/* webpackChunkName: 'selectExpand' */ '@/views/SelectExpand')
+const ChatGPT = () => import(/* webpackChunkName: 'chatGPT' */ '@/views/ChatGPT')
 
 export default [
   {
@@ -40,6 +41,15 @@ export default [
     meta: {
       title: '远程搜索下拉框默认值不可删除',
       icon: 'el-icon-edit'
+    }
+  },
+  {
+    path: 'chatGPT',
+    name: 'chatGPT',
+    component: ChatGPT,
+    meta: {
+      title: 'chatGPT',
+      icon: 'el-icon-phone-outline'
     }
   },
   {

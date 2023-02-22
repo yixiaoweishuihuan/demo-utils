@@ -1,0 +1,70 @@
+@import '~/var.styl';
+.chat-gpt
+  position relative
+  width: 60%
+  height: calc(100vh - 130px)
+  margin: 20px auto
+  padding: 0
+  border: 1px solid $primary-border
+  border-radius: 20px
+  background: #ededed
+  .input-content
+    display: flex
+    padding: 10px
+    border-top: 1px solid $primary-border
+    .clear-btn
+      margin-left: 10px
+  .main
+    padding: 0px 20px
+    .loading-png
+      position absolute
+      left 50%
+      top 45%
+      width: 50px
+      height: 50px
+      margin: -25px 0 0 -25px
+      animation: rotate 2s infinite linear 
+  .item
+    display: flex
+    min-height: 38px
+    align-items: center
+    color: $parmary-text
+    margin-top: 10px
+    &:first-child
+      margin-top: 0
+    &:hover
+      .btn
+        visibility: visible !important
+  .person
+    justify-content: flex-end
+    color: $normal-text
+  .item-content
+    display: flex
+    .avator
+      width: 28px
+      height: 28px
+      line-height: 28px
+      text-align: center
+      margin-top: 2.5px
+      border-radius: 50%
+      border: 1px solid #DCDFE6
+      background-color $Success
+    .el-icon-s-custom
+      background-color $Warning
+    .text-common
+      position relative
+      line-height: 22px
+      padding: 5px 10px
+      border-radius: 8px
+    .text-robot
+      background-color #fff
+      .btn
+        margin-left: 10px
+        visibility: hidden
+    .text-person
+      background-color #95eb6c
+
+@keyframes rotate {
+  0% { rotate: 0deg }
+  100% { rotate: 360deg }
+}
