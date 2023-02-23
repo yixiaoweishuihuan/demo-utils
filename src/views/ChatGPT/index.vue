@@ -80,7 +80,7 @@ export default {
     // 询问答案
     async getMessage () {
       if (this.loading) {
-        return this.$message.warning('正在查找中，请稍后再试 !')
+        return this.$message.warning('正在思考中，请稍后再试 !')
       }
       if (!this.question) {
         return this.$message.error('请输入要查询的问题 !')
@@ -140,7 +140,7 @@ export default {
       this.talkLists = [
         {
           isRobot: true,
-          text: '你好, 欢迎使用chatGPT !'
+          text: '你好! 我是ChatGPT, 很高兴为您服务 !'
         }
       ]
     }
