@@ -12,11 +12,11 @@
             ><span class="height-100"
               ><i class="el-icon-cpu mgr-10 avator"></i
             ></span>
+
             <i class="text-common text-robot mgr-38"
               >{{ item.text
               }}<el-button
                 class="btn"
-                @click="copy()"
                 :data-clipboard-text="item.text"
                 v-if="index != 0"
                 size="mini"
@@ -118,7 +118,7 @@ export default {
       }
     },
     // 复制回答
-    copy () {
+    initCopy () {
       const Message = this.$message
       const clipboard = new ClipboardJS('.btn')
       clipboard.on('success', function (e) {
@@ -148,6 +148,9 @@ export default {
   created () {
     this.initData()
     this.sendMessage = debounce(this.getMessage, 200)
+  },
+  mounted () {
+    this.initCopy()
   },
   updated () {
     this.scrollToBottom()
